@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@kaeppele/client": ["libs/client/src/index.ts"],
+      "@kaeppele/common-ui": ["libs/common-ui/src/index.ts"],
+      "@kaeppele/countdown": ["libs/countdown/src/index.ts"],
+      "@kaeppele/shared/core": ["libs/shared/core/src/index.ts"],
+      "@kaeppele/shared/interfaces": ["libs/shared/interfaces/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"],
+  "include": ["global.d.ts"]
+}
