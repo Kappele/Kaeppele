@@ -14,10 +14,7 @@
         "main": "apps/kaeppele-view/src/main.ts",
         "polyfills": ["zone.js"],
         "tsConfig": "apps/kaeppele-view/tsconfig.app.json",
-        "assets": [
-          "apps/kaeppele-view/src/favicon.ico",
-          "apps/kaeppele-view/src/assets"
-        ],
+        "assets": ["apps/kaeppele-view/src/favicon.ico", "apps/kaeppele-view/src/assets"],
         "styles": ["apps/kaeppele-view/src/styles.css"],
         "scripts": []
       },
@@ -69,10 +66,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/kaeppele-view/**/*.ts",
-          "apps/kaeppele-view/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/kaeppele-view/**/*.ts", "apps/kaeppele-view/**/*.html"]
       }
     },
     "test": {

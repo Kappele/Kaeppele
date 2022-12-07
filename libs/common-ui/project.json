@@ -16,10 +16,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/common-ui/**/*.ts",
-          "libs/common-ui/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/common-ui/**/*.ts", "libs/common-ui/**/*.html"]
       }
     }
   },

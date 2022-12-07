@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { CountdownService } from "@kaeppele/client"
-import { intervalToDuration, formatDuration } from 'date-fns'
+import { CountdownService } from '@kaeppele/client';
+import { formatDuration, intervalToDuration } from 'date-fns';
 
 @Component({
   selector: 'kaeppele-countdown',
@@ -12,15 +12,15 @@ export class CountdownComponent implements OnInit, OnDestroy {
   private endDate: Optional<Date>;
   private interval: Optional<NodeJS.Timer>;
 
-  constructor(private countdownService: CountdownService){}
+  constructor(private countdownService: CountdownService) {}
   ngOnDestroy(): void {
     clearInterval(this.interval);
   }
 
   async ngOnInit(): Promise<void> {
     this.endDate = await this.countdownService.getEndDate();
-
-    this.interval = setInterval(() => this.UpdateCountdown(), 500)
+    const refreshIntervall = 500;
+    this.interval = setInterval(() => this.UpdateCountdown(), refreshIntervall);
   }
 
   UpdateCountdown() {
@@ -30,28 +30,29 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
     const releaseDate = intervalToDuration({
       start: Date.now(),
-      end: this.endDate
-    })
+      end: this.endDate,
+    });
 
     const dateString = formatDuration(releaseDate, {
       zero: true,
-      delimiter: ","
-    })
+      delimiter: ',',
+    });
 
     this.releaseDateString = this.removeUnusedFormat(dateString);
   }
-  
+
   removeUnusedFormat(dateString: string): Optional<string> {
-    const dateSegments = dateString.split(",")
-    let returnString = "";
-    let isLeading0 = true; 
+    const dateSegments = dateString.split(',');
+    let returnString = '';
+    let isLeading0 = true;
     for (const dateSegment of dateSegments) {
-      if (dateSegment.startsWith("0") && isLeading0) {
+      if (dateSegment.startsWith('0') && isLeading0) {
         continue;
       }
-      isLeading0 = false
-      returnString += dateSegment + " "
+      isLeading0 = false;
+      returnString += dateSegment + ' ';
     }
+
     return returnString;
   }
 }

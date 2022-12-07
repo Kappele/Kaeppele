@@ -16,10 +16,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/shared/core/**/*.ts",
-          "libs/shared/core/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/shared/core/**/*.ts", "libs/shared/core/**/*.html"]
       }
     }
   },

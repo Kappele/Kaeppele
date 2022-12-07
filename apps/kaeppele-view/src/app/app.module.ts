@@ -5,9 +5,9 @@ import { CommonUiModule } from '@kaeppele/common-ui';
 import { AppComponent } from './app.component';
 
 @NgModule({
-    declarations: [AppComponent],
-    providers: [],
-    bootstrap: [AppComponent],
-    imports: [BrowserModule, CommonUiModule]
+  declarations: [AppComponent],
+  providers: [],
+  bootstrap: [AppComponent],
+  imports: [BrowserModule, CommonUiModule],
 })
 export class AppModule {}

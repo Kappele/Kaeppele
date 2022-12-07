@@ -1,16 +1,16 @@
 .outer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    background-image: radial-gradient(#026d00 0%, #e1ff00 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(#026d00 0%, #e1ff00 100%);
 }
 
 .center {
-    text-align: center;
-    color: aliceblue;
+  text-align: center;
+  color: aliceblue;
 }

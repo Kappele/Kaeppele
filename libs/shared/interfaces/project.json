@@ -16,10 +16,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/shared/interfaces/**/*.ts",
-          "libs/shared/interfaces/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/shared/interfaces/**/*.ts", "libs/shared/interfaces/**/*.html"]
       }
     }
   },

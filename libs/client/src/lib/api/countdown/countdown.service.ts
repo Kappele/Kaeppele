@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
+import { parseISO } from 'date-fns';
+
 import { get } from '../_shared/api.service';
 import { ApiRoutes } from '../apiRoutes';
-import { parseISO } from "date-fns"
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CountdownService {
-  public async getEndDate(): Promise<Date>{
-    return parseISO(await get<string>(ApiRoutes["countdown"]["get"]))
+  public async getEndDate(): Promise<Date> {
+    return parseISO(await get<string>(ApiRoutes.countdown.get));
   }
 }
