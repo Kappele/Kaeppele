@@ -67,7 +67,6 @@
         "max-classes-per-file": ["error", 1],
         "no-multi-spaces": "error",
         "eqeqeq": "error",
-        "dot-notation": "error",
         "dot-location": ["error", "property"],
         "sort-class-members/sort-class-members": [
           2,

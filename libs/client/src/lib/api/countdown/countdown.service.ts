@@ -8,6 +8,6 @@ import { ApiRoutes } from '../apiRoutes';
 })
 export class CountdownService {
   public async getEndDate(): Promise<Date> {
-    return parseISO(await get<string>(ApiRoutes.countdown.get));
+    return parseISO(await get<string>(ApiRoutes['countdown']['get']));
   }
 }

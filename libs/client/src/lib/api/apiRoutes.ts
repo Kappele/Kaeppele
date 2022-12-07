@@ -1,5 +1,4 @@
 export const ApiRoot = 'http://localhost:3333/api';
-
 export const ApiRoutes: Api = {
   countdown: {
     name: 'countdown',
