@@ -6,9 +6,6 @@ import { parseISO } from "date-fns"
   providedIn: 'root'
 })
 export class CountdownService {
-
-  constructor() { }
-
   public async getEndDate(): Promise<Date>{
     return parseISO(await get<string>(ApiRoutes["countdown"]["get"]))
   }

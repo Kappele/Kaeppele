@@ -40,6 +40,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
 
     this.releaseDateString = this.removeUnusedFormat(dateString);
   }
+  
   removeUnusedFormat(dateString: string): Optional<string> {
     const dateSegments = dateString.split(",")
     let returnString = "";
